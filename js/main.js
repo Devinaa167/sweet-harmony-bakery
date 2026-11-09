@@ -1,6 +1,6 @@
 /* ================================================================= */
 /* SWEET HARMONY ARTISAN BAKERY - MAIN JAVASCRIPT                    */
-/* Part 3: Enhancing Functionality, Interactivity & SEO              */
+/* Enhancing Functionality, Interactivity & SEO              */
 /* ================================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,9 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     /* 3. ENQUIRY FORM VALIDATION & QUOTE CALCULATOR                 */
     /* ------------------------------------------------------------- */
     const enquiryForm = document.querySelector('#enquiryForm');
+    const customModal = document.getElementById('custom-modal');
+    const modalMessage = document.getElementById('modal-message');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
 
     if (enquiryForm) {
         enquiryForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
             const nameInput = document.getElementById('fullname');
             const emailInput = document.getElementById('email');
             const dateInput = document.getElementById('event-date');
@@ -97,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const productVal = productSelect ? productSelect.value : "";
 
             if (!nameVal || !emailVal || !dateVal || !productVal) {
-                event.preventDefault();
                 alert('Please fill in all required fields before submitting your enquiry.');
                 return;
             }
@@ -105,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // Email format verification
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(emailVal)) {
-                event.preventDefault();
                 alert('Please enter a valid email address.');
                 return;
             }
@@ -116,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
             today.setHours(0, 0, 0, 0);
 
             if (selectedDate < today) {
-                event.preventDefault();
                 alert('Please select a valid future date for your event.');
                 return;
             }
@@ -127,7 +129,24 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (productVal === 'cupcake-box') basePrice = 180;
             else if (productVal === 'french-pastries') basePrice = 220;
 
-            alert(`Thank you, ${nameVal}! Your custom order enquiry has been validated. Estimated starting price: R${basePrice}.00. We will contact you shortly.`);
+            const successText = `Thank you, ${nameVal}! Your custom order enquiry has been validated. Estimated starting price: R${basePrice}.00. We will contact you shortly.`;
+
+            // Trigger Custom Centered Modal instead of browser alert()
+            if (customModal && modalMessage) {
+                modalMessage.textContent = successText;
+                customModal.removeAttribute('hidden');
+                customModal.setAttribute('aria-hidden', 'false');
+            } else {
+                alert(successText); // Fallback if modal isn't found
+            }
+        });
+    }
+
+    // Modal Close Button Handler
+    if (modalCloseBtn && customModal) {
+        modalCloseBtn.addEventListener('click', () => {
+            customModal.setAttribute('hidden', '');
+            customModal.setAttribute('aria-hidden', 'true');
         });
     }
 
@@ -153,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Compile into a mailto link as requested by the brief
             const recipient = "hello@sweetharmony.co.za";
-            const subject = encodeURIComponent(`[Website Contact] ${type} - From ${name}`);
+            const subject = encodeURIComponent(`[Website Contact] ${type} From ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nType: ${type}\n\nMessage:\n${message}`);
 
             if (feedback) {
