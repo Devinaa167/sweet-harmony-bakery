@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Custom Order Enquiry | Sweet Harmony Artisan Bakery</title>
+    <meta name="description" content="Submit your custom cake and pastry order enquiries at Sweet Harmony Artisan Bakery. Get fast quotes for custom celebration cakes, cupcakes, and dessert tables.">
+    <meta name="keywords" content="custom cake order, bakery enquiry, custom celebration cakes, Sweet Harmony Bakery orders">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ================================================================= -->
+    <!-- HEADER & NAVIGATION SECTION                                       -->
+    <!-- ================================================================= -->
+    <header>
+      <div class="brand-container">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Sweet Harmony Artisan Bakery Logo" class="site-logo">
+        </a>
+        <div class="logo-container">
+          <h1>Sweet Harmony</h1>
+          <p>Artisan Bakery</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Menu</a></li>
+          <li><a href="enquiry.html" class="active">Custom Orders</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- MAIN CONTENT AREA - ENQUIRY FORM                                  -->
+    <!-- ================================================================= -->
+    <main class="page-content">
+        <h2>Custom Cake Order Enquiry</h2>
+        <p>Fill out the form below to request a quote for your custom order. We respond within 24 hours.</p>
+
+        <!-- Form with ID and novalidate to handle custom JS client-side validation -->
+        <form id="enquiryForm" action="#" method="post" class="enquiry-form" novalidate>
+            <div class="form-group">
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <small class="error-message" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="event-date">Event Date *</label>
+                <input type="date" id="event-date" name="event-date" required>
+                <small class="error-message" id="dateError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="product">Product Required *</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>-- Select Option --</option>
+                    <option value="custom-cake">Custom Celebration Cake (R450 base)</option>
+                    <option value="cupcake-box">Gourmet Cupcake Box (R180 base)</option>
+                    <option value="french-pastries">Artisanal French Pastries (R220 base)</option>
+                    <option value="other">Other / Dessert Table (R350 base)</option>
+                </select>
+                <small class="error-message" id="productError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Order Details &amp; Design Description *</label>
+                <textarea id="details" name="details" rows="5" placeholder="Describe theme, flavors, servings required..." required></textarea>
+                <small class="error-message" id="detailsError"></small>
+            </div>
+
+            <!-- Dynamic Feedback / Quote Display Area -->
+            <div id="formFeedback" class="form-feedback" style="display: none;"></div>
+
+            <button type="submit" class="submit-btn">Submit Enquiry & Calculate Quote</button>
+        </form>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- FOOTER SECTION                                                    -->
+    <!-- ================================================================= -->
+    <footer>
+        <p>&copy; 2026 Sweet Harmony Artisan Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Services & Menu | Sweet Harmony Artisan Bakery</title>
+    <meta name="description" content="Explore the artisanal bakery menu and services at Sweet Harmony. Search and filter custom celebration cakes, gourmet cupcakes, and French pastries.">
+    <meta name="keywords" content="bakery menu, custom cakes, gourmet cupcakes, French pastries, Sweet Harmony services">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ================================================================= -->
+    <!-- HEADER & NAVIGATION SECTION                                       -->
+    <!-- ================================================================= -->
+    <header>
+      <div class="brand-container">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Sweet Harmony Artisan Bakery Logo" class="site-logo">
+        </a>
+        <div class="logo-container">
+          <h1>Sweet Harmony</h1>
+          <p>Artisan Bakery</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Services & Menu</a></li>
+          <li><a href="enquiry.html">Custom Orders</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- MAIN CONTENT AREA - ARTISANAL SERVICES & PRODUCTS                 -->
+    <!-- ================================================================= -->
+    <main class="page-content">
+        <h2>Our Artisanal Collections</h2>
+        <p>Explore our menu options below or place a custom order request.</p>
+
+        <!-- Dynamic Search & Filter Section (Part 3 Requirement) -->
+        <div class="search-filter-container">
+            <input type="text" id="searchInput" placeholder="Search menu items (e.g., cakes, cupcakes)..." class="search-input">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="cake">Cakes</button>
+                <button class="filter-btn" data-filter="cupcake">Cupcakes</button>
+                <button class="filter-btn" data-filter="pastry">Pastries</button>
+            </div>
+        </div>
+
+        <div class="card-grid" id="productGrid">
+
+            <article class="card" data-category="cake">
+                <img src="images/custom-cakes.jpg" 
+                    alt="Custom Celebration Cakes" 
+                    class="responsive-img lightbox-trigger">
+                <h3>Custom Celebration Cakes</h3>
+                <p>Tailored multi-tiered cakes for weddings, birthdays, and baby showers.</p>
+                <span class="price">From R650</span>
+                <a href="enquiry.html" class="card-link">Order Custom &rarr;</a>
+            </article>
+
+            <article class="card" data-category="cupcake">
+                <img src="images/cupcakes.jpg" 
+                    alt="Gourmet Cupcakes" 
+                    class="responsive-img lightbox-trigger">
+                <h3>Gourmet Cupcake Boxes</h3>
+                <p>Boxes of 6 or 12 handcrafted cupcakes topped with Swiss meringue buttercream.</p>
+                <span class="price">From R180</span>
+                <a href="enquiry.html" class="card-link">Order Cupcakes &rarr;</a>
+            </article>
+
+            <article class="card" data-category="pastry">
+                <img src="images/pastries.jpg" 
+                    alt="French Pastries" 
+                    class="responsive-img lightbox-trigger">
+                <h3>Artisanal French Pastries</h3>
+                <p>Daily fresh butter croissants, fruit tarts, and colorful macaron collections.</p>
+                <span class="price">From R35</span>
+                <a href="enquiry.html" class="card-link">Order Pastries &rarr;</a>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal Container (Part 3 Requirement) -->
+    <div id="lightboxModal" class="lightbox-modal" style="display: none;">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" alt="Enlarged view">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- FOOTER SECTION                                                    -->
+    <!-- ================================================================= -->
+    <footer>
+        <p>&copy; 2026 Sweet Harmony Artisan Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

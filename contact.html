@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Contact Us & Location | Sweet Harmony Artisan Bakery</title>
+    <meta name="description" content="Get in touch with Sweet Harmony Artisan Bakery in Rosebank, Johannesburg. Send us a general message, find our operating hours, phone number, and location map.">
+    <meta name="keywords" content="contact bakery, Sweet Harmony Rosebank, bakery operating hours, bakery address Johannesburg, send message">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ================================================================= -->
+    <!-- HEADER & NAVIGATION SECTION                                       -->
+    <!-- ================================================================= -->
+    <header>
+      <div class="brand-container">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Sweet Harmony Artisan Bakery Logo" class="site-logo">
+        </a>
+        <div class="logo-container">
+          <h1>Sweet Harmony</h1>
+          <p>Artisan Bakery</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services & Menu</a></li>
+          <li><a href="enquiry.html">Custom Orders</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- MAIN CONTENT AREA - CONTACT CARDS, FORM & MAP                     -->
+    <!-- ================================================================= -->
+    <main class="page-content">
+        <section class="contact-header">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Whether you have a question, feedback, or want to visit our boutique bakery, reach out to us below.</p>
+        </section>
+
+        <!-- Contact Cards Container Grid -->
+        <div class="card-grid contact-grid">
+            <!-- Location Card -->
+            <div class="card contact-card">
+                <div class="card-icon">📍</div>
+                <h3>Our Location</h3>
+                <p>12 Bakers Street<br>Rosebank, Johannesburg</p>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="card contact-card">
+                <div class="card-icon">⏰</div>
+                <h3>Operating Hours</h3>
+                <p><strong>Tue – Sat:</strong> 08:00 – 17:00<br>
+                   <strong>Sunday:</strong> 08:00 – 14:00<br>
+                   <strong>Monday:</strong> Closed</p>
+            </div>
+
+            <!-- Phone & Email Card -->
+            <div class="card contact-card">
+                <div class="card-icon">📞</div>
+                <h3>Phone &amp; Email</h3>
+                <p><strong>Phone:</strong> (011) 555-0192<br>
+                   <strong>Email:</strong> hello@sweetharmony.co.za</p>
+            </div>
+
+            <!-- Social Media Card -->
+            <div class="card contact-card">
+                <div class="card-icon">✨</div>
+                <h3>Connect With Us</h3>
+                <p><strong>Instagram:</strong> @SweetHarmonyZA<br>
+                   <strong>Facebook:</strong> /SweetHarmonyBakeryZA</p>
+            </div>
+        </div>
+
+        <!-- General Contact Form Section (Part 3 Requirement) -->
+        <section class="contact-form-section">
+            <h3 style="text-align: center; margin-bottom: 1.5rem;">Send Us a General Message</h3>
+            <form id="contactForm" class="enquiry-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="msg-type">Enquiry Type *</label>
+                    <select id="msg-type" name="msgType" required>
+                        <option value="" disabled selected>-- Select Message Type --</option>
+                        <option value="General Query">General Bakery Query</option>
+                        <option value="Feedback / Compliment">Feedback or Compliment</option>
+                        <option value="Partnership / Event">Partnership / Event Inquiry</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Your Message *</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <div id="contactFeedback" class="form-feedback" style="display: none;"></div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Google Maps Location iFrame Embed -->
+        <div class="map-container" style="margin-top: 3rem;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.517316744047!2d28.038318!3d-26.145622!2m3!10f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c9354e60155%3A0x6b447669041a9416!2sRosebank%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza" 
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                title="Sweet Harmony Bakery Location">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- FOOTER SECTION                                                    -->
+    <!-- ================================================================= -->
+    <footer>
+        <p>&copy; 2026 Sweet Harmony Artisan Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
