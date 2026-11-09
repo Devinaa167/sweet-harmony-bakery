@@ -627,3 +627,61 @@ button:focus,
     border-color: var(--primary-color) !important;
     box-shadow: 0 0 0 4px rgba(216, 112, 147, 0.35) !important;
 }
+
+/* Custom Centered Modal Dialog */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-card {
+    background-color: #FFFFFF;
+    padding: 30px 24px;
+    border-radius: 12px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    border: 2px solid #D87093;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.modal-card h3 {
+    margin-top: 0;
+    color: #3E2723;
+    font-size: 1.5rem;
+}
+
+.modal-card p {
+    color: #4A4A4A;
+    margin: 16px 0 24px;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.modal-card .btn-primary {
+    background-color: #D87093;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.modal-card .btn-primary:hover {
+    background-color: #C86D7C;
+}
